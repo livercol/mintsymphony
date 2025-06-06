@@ -1177,6 +1177,7 @@ button:focus {
 .contact-us h3 {
   font-size: 36px;
   margin-bottom: 45px;
+  text-align: center;
 }
 
 .contact-us p span {
@@ -1188,8 +1189,49 @@ button:focus {
   background: #343a40;
   color: #fff;
   position: relative;
+  padding: 50px 20px;
 }
 
+/* NUEVO: Flexbox para contacto + mapa */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contact-info {
+  flex: 1 1 45%;
+}
+
+.contact-info h4 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.contact-info a {
+  color: #61D2B4;
+  text-decoration: none;
+}
+
+.contact-map {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* Tus estilos de formulario se mantienen */
 .form-control {
   width: 100%;
   margin-bottom: 10px;
@@ -1224,6 +1266,7 @@ button:focus {
 .list-unstyled li {
   color: #d9534f;
 }
+
 
 /* ==========================================================================
 15. Footer Style
@@ -1268,4 +1311,50 @@ footer {
 
 .copyright p a:hover {
   color: #61D2B4;
+}
+
+/* Botón de Promociones */
+.promo-button {
+  position: fixed;
+  bottom: 90px; /* Más arriba que el de WhatsApp */
+  right: 20px;
+  padding: 10px 25px;
+  background-color: #ED775B;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.promo-button:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 160px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #0B7785;
+  background-image: url('../img/logo-whatsapp.png'); /* Ícono personalizado */
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
