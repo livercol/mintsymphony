@@ -559,18 +559,20 @@ button:focus {
 }
 
 .slicknav_menu {
-  /*display: none;*/
-    height: auto; /* o un valor fijo más alto */
-  padding: 20px 20px;
-  display: flex;
- /* align-items: center;*/
+  display: none;
+  
+  
 }
 
 @media screen and (max-width: 768px) {
   .navbar-header {
     width: 100%;
-     height: auto;
-    padding: 12px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .slicknav_menu .slicknav_nav {
+    padding-top: 20px; /* Baja todo el bloque de ítems */
   }
   .navbar-brand {
     position: absolute;
